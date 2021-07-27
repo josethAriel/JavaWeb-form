@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+* {
+	padding: 3px 10px;
+	border: PowderBlue 5px double;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+div {
+	font-size: 18px;
+}
+

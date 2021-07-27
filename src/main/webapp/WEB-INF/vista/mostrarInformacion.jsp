@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Informacion</title>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/recursos/estilos/mostrar.css">
 </head>
 <body>
 	
-	<h2>Informacion sobre ${elUsuario.nombre} ${elUsuario.apellido}</h2>
+	<h2>Informacion sobre ${elUsuario.nombre} ${elUsuario.apellido}:</h2>
 	<div>
 		<ul>
 			<li><strong>Edad:</strong> ${elUsuario.edad}</li>
