@@ -2,15 +2,25 @@ package mvc;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/usuario")
 public class UsuarioControlador {
+	
+	// CREAMOS UN METODO QUE NOS ELIMINE LOS ESPACIOS EN BLANCO
+	@InitBinder
+	public void miBinder(WebDataBinder birder) {
+		StringTrimmerEditor recortarEspaciosBlanco = new StringTrimmerEditor(true);
+		birder.registerCustomEditor(String.class, recortarEspaciosBlanco);
+	}
 	
 	//Se crea un enlace al formulario
 	@RequestMapping("/mostrar")

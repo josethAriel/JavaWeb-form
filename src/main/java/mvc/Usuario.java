@@ -1,20 +1,44 @@
 package mvc;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import validaciones.CPostalPichincha;
+
 public class Usuario {
 
+	@NotNull(message = "* campo requerido")
+	@Pattern(regexp = "[a-zA-Z]+", message="* no valido")
 	private String nombre;
 	
+	@NotNull(message = "* campo requerido")
+	@Pattern(regexp = "[a-zA-Z]+", message="* no valido")
 	private String apellido;
 	
+	@Min(value=18,message="No se admiten edades menores de 18 años")
+	@Max(value=100,message="No se admiten edades mayores de 100 años")
+	private int edad;
+	
+	@NotNull(message = "* campo requerido")
+	@Email(message = "* email no valido ej. example@mail.com")
 	private String email;
 	
+	@NotNull(message = "* campo requerido")
+	@Pattern(regexp = "[0-9]{10}", message="* numero no valido")
 	private String telefono;
 	
+	@NotNull(message = "* campo requerido")
 	private String direccion;
 	
 	private String provincia;
 	private String estadoCivil;
 	
+	@NotNull(message = "* campo requerido")
+	@Pattern(regexp = "[0-9]{6}", message="Ingrese 6 valores numericos")
+	@CPostalPichincha
 	private String codigoPostal;
 	
 
@@ -80,6 +104,14 @@ public class Usuario {
 
 	public void setCodigoPostal(String codigoPostal) {
 		this.codigoPostal = codigoPostal;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
 	
 }

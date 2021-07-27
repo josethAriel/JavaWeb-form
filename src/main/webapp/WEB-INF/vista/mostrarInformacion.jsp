@@ -11,12 +11,13 @@
 	<h2>Informacion sobre ${elUsuario.nombre} ${elUsuario.apellido}</h2>
 	<div>
 		<ul>
-			<li>Correo electronico: ${elUsuario.email}</li>
-			<li>Numero telefonico: ${elUsuario.telefono}</li>
-			<li>Direccion: ${elUsuario.direccion}</li>
-			<li>Provincia: ${elUsuario.provincia}</li>
-			<li>Codigo postal: ${elUsuario.codigoPostal}</li>
-			<li>Estado civil: ${elUsuario.estadoCivil}</li>
+			<li><strong>Edad:</strong> ${elUsuario.edad}</li>
+			<li><strong>Correo electronico:</strong> ${elUsuario.email}</li>
+			<li><strong>Numero telefonico:</strong> ${elUsuario.telefono}</li>
+			<li><strong>Direccion:</strong> ${elUsuario.direccion}</li>
+			<li><strong>Provincia:</strong> ${elUsuario.provincia}</li>
+			<li><strong>Codigo postal:</strong> ${elUsuario.codigoPostal}</li>
+			<li><strong>Estado civil:</strong> ${elUsuario.estadoCivil}</li>
 		</ul>
 	</div>
 	
