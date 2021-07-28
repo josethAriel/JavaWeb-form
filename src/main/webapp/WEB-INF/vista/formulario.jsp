@@ -22,7 +22,7 @@
 		<form:input path="apellido" placeholder="Apellido"/>
 		<form:errors path="apellido" style="color:#f66151"></form:errors>
 		<form:input path="edad" placeholder="Edad"/>
-		<form:errors patch="edad" style="color:#f66151"></form:errors>
+		<form:errors path="edad" style="color:#f66151"></form:errors>
 		<form:input path="email" placeholder="Email"/>
 		<form:errors path="email" style="color:#f66151"></form:errors>
 		<form:input path="telefono" placeholder="Telefono"/>

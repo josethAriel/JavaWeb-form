@@ -18,12 +18,12 @@ public class Usuario {
 	@Pattern(regexp = "[a-zA-Z]+", message="* no valido")
 	private String apellido;
 	
-	@Min(value=18,message="No se admiten edades menores de 18 años")
-	@Max(value=100,message="No se admiten edades mayores de 100 años")
+	@Min(value=18,message="No menores de 18 años")
+	@Max(value=100,message="No mayores de 100 años")
 	private int edad;
 	
 	@NotNull(message = "* campo requerido")
-	@Email(message = "* email no valido ej. example@mail.com")
+	@Email(message = "* email no valido")
 	private String email;
 	
 	@NotNull(message = "* campo requerido")
