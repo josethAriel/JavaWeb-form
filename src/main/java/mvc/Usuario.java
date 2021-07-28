@@ -20,7 +20,8 @@ public class Usuario {
 	
 	@Min(value=18,message="No menores de 18 años")
 	@Max(value=100,message="No mayores de 100 años")
-	private int edad;
+	@NotNull(message = "* campo requerido")
+	private Integer edad;
 	
 	@NotNull(message = "* campo requerido")
 	@Email(message = "* email no valido")
@@ -106,11 +107,11 @@ public class Usuario {
 		this.codigoPostal = codigoPostal;
 	}
 
-	public int getEdad() {
+	public Integer getEdad() {
 		return edad;
 	}
 
-	public void setEdad(int edad) {
+	public void setEdad(Integer edad) {
 		this.edad = edad;
 	}
 	
