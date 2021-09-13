@@ -76,6 +76,14 @@ public class Controlador {
 			elModelo.addAttribute("elUsuario",elUsuario);
 			return "formulario";
 		}
+		
+	//Eliminar
+		@GetMapping("/eliminar")
+		public String eliminarCliente(@RequestParam("usuarioId") int Id){
+			//Eliminar Usuario
+			usuarioDAO.eliminarUsuario(Id);
+			return "redirect:/cliente/lista";
+		}
 	
 	@Autowired
 	private UsuarioDAO usuarioDAO;

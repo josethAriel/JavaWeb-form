@@ -11,5 +11,7 @@ public interface UsuarioDAO {
 	public void insertarUsuario(Usuario elUsuario);
 
 	public Usuario getUsuario(int id);
+
+	public void eliminarUsuario(int id);
 	
 }

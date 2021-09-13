@@ -52,6 +52,17 @@ public class UsuarioDAOclase implements UsuarioDAO{
 		Usuario elUsuario=miSession.get(Usuario.class,id);
 		return elUsuario;
 	}
-	
-	
+
+	@Override
+	@Transactional
+	public void eliminarUsuario(int id) {
+		// TODO Auto-generated method stub
+		//Obtener la Sessio
+		Session miSession = sessionFactory.getCurrentSession();
+		Query consulta=miSession.createQuery("delete from Usuario where id=:IdDelUsuario");
+		consulta.setParameter("IdDelUsuario", id);
+		consulta.executeUpdate();
+		
+	}
+		
 }
