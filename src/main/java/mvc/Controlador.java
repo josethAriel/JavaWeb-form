@@ -79,11 +79,20 @@ public class Controlador {
 		
 	//Eliminar
 		@GetMapping("/eliminar")
-		public String eliminarCliente(@RequestParam("usuarioId") int Id){
+		public String eliminarUsuario(@RequestParam("usuarioId") int Id){
 			//Eliminar Usuario
 			usuarioDAO.eliminarUsuario(Id);
 			return "redirect:/cliente/lista";
 		}
+		
+	//Mirar
+		@GetMapping("/mirar")
+		public String mirarUsuario(@RequestParam("usuarioId") int Id,Model elModelo){
+			// Usuario
+			Usuario elUsuario=usuarioDAO.getUsuario(Id);
+			elModelo.addAttribute("elUsuario",elUsuario);
+			return "mostrarInformacion";
+		}	
 	
 	@Autowired
 	private UsuarioDAO usuarioDAO;

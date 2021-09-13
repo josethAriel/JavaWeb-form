@@ -24,6 +24,7 @@
 			<th>Codigo postal</th>
 			<th>Modificar</th>
 			<th>Eliminar</th>
+			<th>Ver</th>
 		</tr>
 		<c:forEach var="usuarioTemp" items="${usuarios}">
 		
@@ -32,6 +33,10 @@
 			</c:url>
 			
 			<c:url var="linkEliminar" value="/cliente/eliminar">
+				<c:param name="usuarioId" value="${usuarioTemp.id}"></c:param>
+			</c:url>
+			
+			<c:url var="linkMirar" value="/cliente/mirar">
 				<c:param name="usuarioId" value="${usuarioTemp.id}"></c:param>
 			</c:url>
 		
@@ -48,6 +53,7 @@
 				
 				<td><a href="${linkActualizar}"><input type="button" value="Modificar"/></a></td>
 				<td><a href="${linkEliminar}"><input type="button" value="Eliminar" onclick="if(!(confirm('Vas a eliminar un registro. !!Estas seguro!!')))return false" /></a></td>
+				<td><a href="${linkMirar}"><input type="button" value="Ver"/></a></td>
 				
 			</tr>
 		</c:forEach>		
