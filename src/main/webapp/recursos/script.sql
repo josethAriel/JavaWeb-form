@@ -1,0 +1,17 @@
+create database examen;
+
+use examen;
+
+CREATE TABLE usuario(
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(35) NULL DEFAULT NULL,
+  apellido VARCHAR(35) NULL DEFAULT NULL,
+  edad INT(11) NULL DEFAULT NULL,
+  email VARCHAR(45) NULL DEFAULT NULL,
+  telefono VARCHAR(15) NULL DEFAULT NULL,
+  direccion VARCHAR(45) NULL DEFAULT NULL,
+  provincia VARCHAR(25) NULL DEFAULT NULL,
+  estado_civil VARCHAR(35) NULL DEFAULT NULL,
+  codigo_postal VARCHAR(25) NULL DEFAULT NULL,
+  PRIMARY KEY (id))
+ENGINE = InnoDB;
