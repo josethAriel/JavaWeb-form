@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #ffffff;
+	background: rgb(255, 255, 255);
 	color: #435160;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -62,9 +62,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background: #77767b;
 	animation-name: shake;
+
 }
 
 .btn-enviar {
 	animation-fill-mode: both;
 	animation-duration: 1s;
+	padding-top: 10px;
+    padding-bottom: 10px;
 }

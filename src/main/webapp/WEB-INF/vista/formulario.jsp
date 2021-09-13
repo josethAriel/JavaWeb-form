@@ -7,12 +7,14 @@
 <head>
 <meta charset="UTF-8">
 	<title>Formulario de Registro</title>
+	<link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/recursos/img/icono.png"/>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/recursos/estilos/formulario.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+	<a style="text-decoration:none" href="javascript:history.back()">REGRESAR</a>
 	<div class="form">
 	<h1>Informacion Personal</h1>
 	<form:form action="conectarFormulario" modelAttribute="elUsuario" method="POST">

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Pagina Principal</title>
+<link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/recursos/img/icono.png"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/recursos/estilos/inicio.css">
 </head>
 <body>

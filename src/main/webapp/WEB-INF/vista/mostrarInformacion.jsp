@@ -5,10 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Informacion</title>
+<link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/recursos/img/icono.png"/>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/recursos/estilos/mostrar.css">
 </head>
 <body>
 	
+	<a style="text-decoration:none" href="javascript:history.back()">REGRESAR</a>
 	<h2>Informacion sobre ${elUsuario.nombre} ${elUsuario.apellido}:</h2>
 	<div>
 		<ul>

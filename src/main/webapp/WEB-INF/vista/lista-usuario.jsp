@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Lista de Usuarios</title>
+<link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/recursos/img/icono.png"/>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 </head>
@@ -51,9 +52,9 @@
 				<td>${usuarioTemp.estadoCivil}</td>
 				<td>${usuarioTemp.codigoPostal}</td>
 				
-				<td><a href="${linkActualizar}"><input type="button" value="Modificar"/></a></td>
-				<td><a href="${linkEliminar}"><input type="button" value="Eliminar" onclick="if(!(confirm('Vas a eliminar un registro. !!Estas seguro!!')))return false" /></a></td>
-				<td><a href="${linkMirar}"><input type="button" value="Ver"/></a></td>
+				<td><a href="${linkActualizar}"><input type="image" src="${pageContext.request.contextPath}/recursos/img/editar.png" width="30" height="30"/></a></td>
+				<td><a href="${linkEliminar}"><input type="image" src="${pageContext.request.contextPath}/recursos/img/eliminar.png" width="30" height="30" onclick="if(!(confirm('Vas a eliminar un registro. !!Estas seguro!!')))return false" /></a></td>
+				<td><a href="${linkMirar}"><input type="image" src="${pageContext.request.contextPath}/recursos/img/mirar.png" width="30" height="30"></a></td>
 				
 			</tr>
 		</c:forEach>		
