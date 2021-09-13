@@ -9,6 +9,6 @@
 </head>
 <body>
     <img src="https://media.giphy.com/media/3o6Zt1BNtIvLf2AUfu/giphy.gif"/>
-<p><a href="usuario/mostrar">Iniciar</a></p>
+<p><a href="lista">Iniciar</a></p>
 </body>
 </html>

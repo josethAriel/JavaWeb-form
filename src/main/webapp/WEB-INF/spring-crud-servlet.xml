@@ -72,10 +72,8 @@
 		
 	<!-- Carpeta que va a contener todos los recursos que desee -->
 	 <mvc:resources location="/recursos/" mapping="/recursos/**"></mvc:resources>
-	<!--   
+	  
 	 <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 	<property name="basename" value="resources/messages"></property>
     </bean>
-
--->
 </beans>

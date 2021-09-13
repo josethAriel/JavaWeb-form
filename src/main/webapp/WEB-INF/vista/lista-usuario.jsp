@@ -37,5 +37,7 @@
 			</tr>
 		</c:forEach>		
 	</table>
+	<br>
+	<input type="button" value="Agregar Usuario" onclick="window.location.href='mostrarFormularioAgregar';return false"/>
 </body>
 </html>
