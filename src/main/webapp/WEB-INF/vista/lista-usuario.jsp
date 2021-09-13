@@ -22,8 +22,14 @@
 			<th>Provincia</th>
 			<th>Estado civil</th>
 			<th>Codigo postal</th>
+			<th>Modificar</th>
 		</tr>
 		<c:forEach var="usuarioTemp" items="${usuarios}">
+		
+			<c:url var="linkActualizar" value="/cliente/muestraFormularioActualizar">
+			<c:param name="usuarioId" value="${usuarioTemp.id}"></c:param>
+			</c:url>
+		
 			<tr>
 				<td>${usuarioTemp.nombre}</td>
 				<td>${usuarioTemp.apellido}</td>
@@ -34,6 +40,7 @@
 				<td>${usuarioTemp.provincia}</td>
 				<td>${usuarioTemp.estadoCivil}</td>
 				<td>${usuarioTemp.codigoPostal}</td>
+				<td><a href="${linkActualizar}"><input type="button" value="Modificar"/></a></td>
 			</tr>
 		</c:forEach>		
 	</table>

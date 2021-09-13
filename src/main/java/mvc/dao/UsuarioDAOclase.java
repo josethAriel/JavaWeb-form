@@ -39,8 +39,19 @@ public class UsuarioDAOclase implements UsuarioDAO{
 		//Obtenemos la session
 		Session miSession = sessionFactory.getCurrentSession();
 		//Ingresamos el usuario
-		miSession.save(elUsuario);
-		
+		miSession.saveOrUpdate(elUsuario);
 	}
+
+	@Override
+	@Transactional
+	public Usuario getUsuario(int id) {
+		// TODO Auto-generated method stub
+		//Obtener la Sessio
+		Session miSession = sessionFactory.getCurrentSession();
+		//Obtenemos la informacion del cliente seleccionado
+		Usuario elUsuario=miSession.get(Usuario.class,id);
+		return elUsuario;
+	}
+	
 	
 }

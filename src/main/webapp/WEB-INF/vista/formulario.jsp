@@ -17,6 +17,8 @@
 	<h1>Informacion Personal</h1>
 	<form:form action="conectarFormulario" modelAttribute="elUsuario" method="POST">
 	
+	<form:hidden path="id"/>
+	
 		<form:input path="nombre" placeholder="Nombre"/>
 	    <form:errors path="nombre" style="color:#f66151"></form:errors>
 		<form:input path="apellido" placeholder="Apellido"/>
