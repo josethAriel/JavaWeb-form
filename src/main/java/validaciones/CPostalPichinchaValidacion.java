@@ -1,10 +1,10 @@
 package validaciones;
-/*
+
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-*/
-public class CPostalPichinchaValidacion /*implements ConstraintValidator<CPostalPichincha,String>*/ {
-/*
+
+public class CPostalPichinchaValidacion implements ConstraintValidator<CPostalPichincha,String> {
+
 	@Override
 	public void initialize(CPostalPichincha elCodigo){
 		prefijoCodigoPichincha=elCodigo.value();
@@ -20,5 +20,5 @@ public class CPostalPichinchaValidacion /*implements ConstraintValidator<CPostal
 	}
 
 	private String prefijoCodigoPichincha;
-	*/
+	
 }

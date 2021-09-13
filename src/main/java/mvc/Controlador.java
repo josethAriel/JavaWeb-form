@@ -59,7 +59,10 @@ public class Controlador {
 			if(resultadoValidacion.hasErrors()) {
 				return "formulario";
 			}else {
-			return "mostrarInformacion";
+			
+			usuarioDAO.insertarUsuario(elUsuario);
+			//return "mostrarInformacion";
+			return "redirect:/cliente/lista";
 		}
 		}
 	

@@ -15,7 +15,7 @@
 
 	<div class="form">
 	<h1>Informacion Personal</h1>
-	<form:form action="conectarFormulario" modelAttribute="elUsuario">
+	<form:form action="conectarFormulario" modelAttribute="elUsuario" method="POST">
 	
 		<form:input path="nombre" placeholder="Nombre"/>
 	    <form:errors path="nombre" style="color:#f66151"></form:errors>

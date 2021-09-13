@@ -31,5 +31,16 @@ public class UsuarioDAOclase implements UsuarioDAO{
 	//Inyeccion de dependencias cuando se necesite
 	@Autowired
 	private SessionFactory sessionFactory;
+
+	@Override
+	@Transactional
+	public void insertarUsuario(Usuario elUsuario) {
+		// TODO Auto-generated method stub
+		//Obtenemos la session
+		Session miSession = sessionFactory.getCurrentSession();
+		//Ingresamos el usuario
+		miSession.save(elUsuario);
+		
+	}
 	
 }
